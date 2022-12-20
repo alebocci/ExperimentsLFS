@@ -12,6 +12,15 @@ tempSim='tmpSim.txt'
 if not os.path.exists("input"):
     os.mkdir('input')
 
+os.chdir('input')
+if not os.path.exists("points"):
+    os.mkdir('points')
+if not os.path.exists("experiments"):
+    os.mkdir('experiments')
+os.chdir('..')
+
+
+
 seeds = []
 for i in range(0,10):
     seeds.append(secrets.randbelow(1_000_000_000))
@@ -40,7 +49,9 @@ for c in config:
         t.write('number_of_nodes:\n\tcloud: '+str(c[0])+'\n\tfog: '+str(c[1])+'\n\tedge: '+str(c[2])+'\n')
 
     os.chdir('input')
+    os.chdir('points')
     with open(str(c)+'.yaml','wb') as dest:
+        os.chdir('..')
         os.chdir('..')
         with open(tempConf,'rb') as head:
             with open(infrTemplate, 'rb') as tail:
@@ -52,7 +63,9 @@ for s in seeds:
         t.write('simulator:\n\tepochs : 200\n\tfunction_duration : 1\n\tseed : '+str(s)+'\n\tuse_padding : true\n\tmax_placement_time : 1\n')
 
     os.chdir('input')
+    os.chdir('experiments')
     with open(str(s)+'_pad.yaml','wb') as dest:
+        os.chdir('..')
         os.chdir('..')
         with open(tempSim,'rb') as head:
             with open(configTemplate, 'rb') as tail:
@@ -64,7 +77,9 @@ for s in seeds:
         t.write('simulator:\n\tepochs : 200\n\tfunction_duration : 1\n\tseed : '+str(s)+'\n\tuse_padding : false\n\tmax_placement_time : 1\n')
 
     os.chdir('input')
+    os.chdir('experiments')
     with open(str(s)+'_nopad.yaml','wb') as dest:
+        os.chdir('..')
         os.chdir('..')
         with open(tempSim,'rb') as head:
             with open(configTemplate, 'rb') as tail:
