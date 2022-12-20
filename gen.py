@@ -1,5 +1,4 @@
 import shutil
-import random
 import secrets
 import math
 import os
@@ -42,7 +41,6 @@ def findConf(tot):
 while(tot<=220):
     config.append(findConf(tot))
     tot += 5
-
 
 for c in config:
     with open(tempConf,'w') as t:

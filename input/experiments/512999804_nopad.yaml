@@ -1,7 +1,7 @@
 simulator:
   epochs : 200
   function_duration : 1
-  seed : 854578217
+  seed : 512999804
   use_padding : false
   max_placement_time : 1
 
