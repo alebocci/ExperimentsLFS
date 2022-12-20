@@ -1,7 +1,7 @@
 number_of_nodes:
-  cloud: 3
-  fog: 16
-  edge: 31
+  cloud: 4
+  fog: 26
+  edge: 50
 
 nodes:
   cloud:

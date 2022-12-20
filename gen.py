@@ -46,7 +46,7 @@ while(tot<=220):
 
 for c in config:
     with open(tempConf,'w') as t:
-        t.write('number_of_nodes:\n\tcloud: '+str(c[0])+'\n\tfog: '+str(c[1])+'\n\tedge: '+str(c[2])+'\n')
+        t.write('number_of_nodes:\n  cloud: '+str(c[0])+'\n  fog: '+str(c[1])+'\n  edge: '+str(c[2])+'\n\n')
 
     os.chdir('input')
     os.chdir('points')
@@ -60,7 +60,7 @@ for c in config:
 
 for s in seeds:
     with open(tempSim,'w') as t:
-        t.write('simulator:\n\tepochs : 200\n\tfunction_duration : 1\n\tseed : '+str(s)+'\n\tuse_padding : true\n\tmax_placement_time : 1\n')
+        t.write('simulator:\n  epochs : 200\n  function_duration : 1\n  seed : '+str(s)+'\n  use_padding : true\n  max_placement_time : 1\n\n')
 
     os.chdir('input')
     os.chdir('experiments')
@@ -74,7 +74,7 @@ for s in seeds:
 
 for s in seeds:
     with open(tempSim,'w') as t:
-        t.write('simulator:\n\tepochs : 200\n\tfunction_duration : 1\n\tseed : '+str(s)+'\n\tuse_padding : false\n\tmax_placement_time : 1\n')
+        t.write('simulator:\n  epochs : 200\n  function_duration : 1\n  seed : '+str(s)+'\n  use_padding : false\n  max_placement_time : 1\n\n')
 
     os.chdir('input')
     os.chdir('experiments')

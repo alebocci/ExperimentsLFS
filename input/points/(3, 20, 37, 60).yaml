@@ -1,7 +1,8 @@
 number_of_nodes:
-	cloud: 3
-	fog: 20
-	edge: 37
+  cloud: 3
+  fog: 20
+  edge: 37
+
 nodes:
   cloud:
     - probability: 1
