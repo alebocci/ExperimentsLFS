@@ -1,3 +1,10 @@
+simulator:
+  epochs : 200
+  function_duration : 1
+  seed : 800732922
+  use_padding : false
+  max_placement_time : 1
+
 events:
   generator_trigger_probability: 0.2
   event_min_probability: 0.3

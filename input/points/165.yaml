@@ -1,3 +1,26 @@
+number_of_nodes:
+  cloud: 8
+  fog: 53
+  edge: 104
+
+event_generators:
+  generator_base_name : device
+  generators:
+    min_quantity: 7
+    max_quantity: 21
+  events_per_generator:
+    min_quantity: 4
+    max_quantity: 4
+  on_edge_probability: 0.75
+  events:
+    - event1
+    - event2
+    - event3
+    - event4
+    - event5
+    - event6
+    - event7
+
 nodes:
   cloud:
     - probability: 1
